@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+body {
+  font: 12px/1.5 Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,
+  \5FAE\8F6F\96C5\9ED1,tahoma,simsun,\5b8b\4f53;
+  background-color: #f0f0f0;
+  
+  color: #999;
+}
+
+/* 居中显示 */
+.wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* 清除浮动：
+      目的是让其有高度
+      在使用浮动的时候一定要注意清除浮动！！！        
+*/
+/* 肯会存在ie浏览器的兼容问题,见如下即可解决 */
+.clear-fix::after {
+  /* 清除浮动 */
+  clear: both;  
+  /* 为元素必须要写内容 */
+  content: "";
+  /* 为元素默认是行内级别元素 */
+  display: block;
+    
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix {
+  /* 兼容IE6和7 */
+  *zoom: 1;
+}
+
+/* 菜单符号，三根线 */
+.lineicon {
+  display: inline-block;
+  height: 13px;
+}
+
+.lineicon i {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 4px;
+}
+
+.lineicon i.firsticon {
+  margin-top: 0;
+}
+
+/* 圆圈图标 */
+.circle-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15x;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30% 0;
+  border: 3px solid #fff;
+}
